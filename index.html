@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+    <style>
+        body {
+            background-color: #E83F25;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .receipt-container {
+            width: 80%;
+            max-width: 600px;
+            border: 1px solid black;
+            margin: 20px auto;
+            background-color: #cdcdcd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+
+        .brand-logo {
+            width: 80px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .brand-title, .receipt-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin: 10px 0;
+        }
+
+        .brand-address, .brand-mobile {
+            text-align: center;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .receipt-body {
+            margin-top: 20px;
+        }
+
+        .receipt-detail {
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .receipt-detailvalue {
+            border-bottom: 0.5px dotted grey;
+            font-weight: bold;
+            width: 40%;
+            text-align: right;
+        }
+
+        .receipt-detailkey {
+            width: 50%;
+            text-align: left;
+        }
+
+        .acc-sign {
+            text-align: left;
+            margin-top: 40px;
+            font-size: 20px;
+        }
+
+        .stamp {
+            height: 100px;
+            width: 100px;
+            display: block;
+            margin: 10px auto;
+        }
+
+        /* Media Query for Mobile Devices */
+        @media screen and (max-width: 480px) {
+            .receipt-container {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .brand-title, .receipt-title {
+                font-size: 1.5rem;
+            }
+
+            .brand-address, .brand-mobile {
+                font-size: 12px;
+            }
+
+            .receipt-detail {
+                flex-direction: column;
+                text-align: left;
+            }
+
+            .receipt-detailkey, .receipt-detailvalue {
+                width: 100%;
+                text-align: left;
+            }
+
+            .receipt-detailvalue {
+                font-size: 16px;
+                margin-top: 5px;
+            }
+
+            .stamp {
+                height: 80px;
+                width: 80px;
+            }
+
+            .acc-sign {
+                font-size: 18px;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="receipt-container">
+        <div class="receipt-header">
+            <img src="plant.png" class="brand-logo"/>
+            <h2 class="brand-title">Krushi Utpanna</h2>
+            <p class="brand-address"> Police Nagar<br>  Nagpur-440024</p>
+            <p class="brand-mobile">+91-8010188925</p>
+        </div>
+        <hr>
+
+        <div class="receipt-body">
+            <h3 class="receipt-title">Payment Receipt</h3>
+
+            <div class="receipt-detail">
+                <div class="receipt-detailkey">Name:</div>
+                <div class="receipt-detailvalue">Ayush Thakre</div>
+            </div>
+
+            <div class="receipt-detail">
+                <div class="receipt-detailkey">Receipt No.:</div>
+                <div class="receipt-detailvalue">1818181</div>
+            </div>
+
+            <div class="receipt-detail">
+                <div class="receipt-detailkey">Amount:</div>
+                <div class="receipt-detailvalue">₹5,90,200/-</div>
+            </div>
+
+            <div class="receipt-detail">
+                <div class="receipt-detailkey">Payment Mode:</div>
+                <div class="receipt-detailvalue">UPI</div>
+            </div>
+
+            <div class="receipt-detail">
+                <div class="receipt-detailkey">Payment Date:</div>
+                <div class="receipt-detailvalue">02-02-2025</div>
+            </div>
+        </div>
+
+        <p class="acc-sign">Accountant Signature:</p>
+        <img src="stamp.png" class="stamp"/>
+
+    </div>
+
+</body>
+</html>
